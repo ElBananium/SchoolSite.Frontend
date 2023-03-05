@@ -1,0 +1,38 @@
+:host
+{
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    user-select: none;
+}
+
+.list
+{
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    justify-content: space-around;
+
+    div
+    {
+        cursor: pointer;
+        margin: 17px 0;
+        font-size: 15px;
+        line-height: 3; 
+        color: #5b5d67;
+        padding: 0 15px;
+        border-radius: 6px;
+        
+
+        
+    }
+    div:hover
+    {
+        background-color:rgba(#5b5d67,0.09)
+    }
+    
+
+    
+}

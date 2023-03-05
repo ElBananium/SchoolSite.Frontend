@@ -1,0 +1,44 @@
+<mat-card>
+
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+        <!-- This is the tree node template for leaf nodes -->
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+          <!-- use a disabled button to provide padding for tree leaf -->
+          <div class="left">
+
+            <button mat-icon-button disabled></button>
+             {{node.name}}
+          </div>
+          <div class="right">
+            <app-routes-tools [node]="node"></app-routes-tools>
+          </div>
+        </mat-tree-node>
+        <!-- This is the tree node template for expandable nodes -->
+        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+          
+
+          <div class="left">
+
+            <button mat-icon-button matTreeNodeToggle
+                  [attr.aria-label]="'Toggle ' + node.name">
+            <mat-icon class="mat-icon-rtl-mirror">
+              {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+            </mat-icon>
+          </button>
+             {{node.name}}
+          </div>
+          <div class="right">
+            <button (click)="AddToCategory(node)" mat-icon-button>
+                <mat-icon>add</mat-icon>
+              </button>
+              <button (click)="DeleteCategory(node)" mat-icon-button color="#5b5d67">
+                <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-tree-node>
+      </mat-tree>
+      <button (click)="AddCategory()" class="addCategory">+</button>
+      
+      
+      
+</mat-card>

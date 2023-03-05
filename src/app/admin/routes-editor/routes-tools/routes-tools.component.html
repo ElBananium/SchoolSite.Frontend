@@ -1,0 +1,12 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button (click)="EditClicked()" mat-icon-button color="#5b5d67">
+        <mat-icon>edit</mat-icon>
+    </button>
+    <button (click)="DeleteClicked()" mat-icon-button color="#5b5d67">
+        <mat-icon>delete</mat-icon>
+    </button>
+   
+</mat-menu>

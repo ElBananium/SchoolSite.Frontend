@@ -1,0 +1,15 @@
+
+    <app-edit-header [OnSendButtonClicked]="onEndClickedEvent.asObservable()"  [catName]="editCategory" [catId]="cateditId" [postid]="editId" *ngIf="isEdit"></app-edit-header>
+    <app-adding-header [OnSendButtonClicked]="onEndClickedEvent.asObservable()" [catId]="editId" [catUrl]="addNodeUrl" *ngIf="!isEdit"></app-adding-header>
+
+
+<mat-card>
+    <quill-editor 
+    (onContentChanged)="OnEditorContentChanged($event)"
+    [placeholder]="'Начните писать...'" 
+    format="html"
+    class="editor"
+    #editor
+    ></quill-editor>
+    <button (click)="OnEndClicked()" mat-raised-button color="primary">{{isEdit ? "Сохранить" : "Добавить" }}</button>
+</mat-card>

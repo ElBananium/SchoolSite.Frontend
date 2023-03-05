@@ -1,0 +1,25 @@
+mat-card
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+.content
+{
+    display: flex;
+    line-height: 3;
+    font-size: 18px;
+}
+.icon-glass
+{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/751/751463.png');
+}
+.bad-lookers
+{
+    margin-left: auto;
+    color: white;
+    background-color: black;
+    padding: 2px;
+    display: inline-block;
+}

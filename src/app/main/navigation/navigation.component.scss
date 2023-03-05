@@ -1,0 +1,13 @@
+button
+{
+    margin: 6px;
+    padding: 6px;
+}
+.spanhovering:hover
+{
+    cursor: pointer;
+}
+mat-tree
+{
+    border-radius: var(--mdc-elevated-card-container-shape, var(--mdc-shape-medium, 4px));
+}
